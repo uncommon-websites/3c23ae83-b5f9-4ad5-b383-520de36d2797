@@ -81,5 +81,5 @@
 		}
 	]}
 />
-<AboutTeaser generating />
+<AboutTeaser />
 <CallToAction generating />
