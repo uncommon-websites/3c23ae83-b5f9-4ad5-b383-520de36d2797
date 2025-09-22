@@ -25,9 +25,8 @@
 />
 
 <Summary
-	generating
 	title="What we do"
-	text="Our technology delivers measurable results through secure, adaptable solutions that directly increase productivity and drive growth."
+	text="We transform fragile startup codebases into production-ready systems through incremental refactoring that preserves business continuity while eliminating technical debt. Starting with Series A fintech and healthtech companies, we help CTOs scale their MVP systems for enterprise customers without the months of engineering delays from accumulated technical debt."
 />
 
 <Testimonials
@@ -60,26 +59,25 @@
 />
 
 <Features
-	generating
-	title="Features"
-	subtitle="Some features"
+	title="Our approach"
+	subtitle="Incremental refactoring that preserves business continuity"
 	features={[
 		{
-			title: "Streamlined Workflows",
+			title: "Zero-downtime refactoring",
 			description:
-				"Automate repetitive tasks and connect systems to improve productivity with our industry-leading 87% time savings."
+				"Transform your codebase incrementally without disrupting live systems. We guarantee business continuity while eliminating technical debt that's slowing your team down."
 		},
 		{
-			title: "Data Analysis",
+			title: "Compliance-ready systems",
 			description:
-				"Extract meaningful insights from your data with powerful analytical tools backed by proprietary AI algorithms that are 3x more accurate than competitors."
+				"Turn your fragile MVP into enterprise-grade architecture that passes Series B audits. We specialize in fintech and healthtech regulatory requirements."
 		},
 		{
-			title: "Secure Collaboration",
+			title: "Startup-focused expertise",
 			description:
-				"Work together seamlessly while maintaining strict data privacy standards with our zero-knowledge architecture and military-grade encryption."
+				"We understand the unique pressures of scaling startups. Our team combines regulated industry experience with empathetic understanding of your constraints."
 		}
 	]}
 />
 <AboutTeaser />
-<CallToAction generating />
+<CallToAction />
