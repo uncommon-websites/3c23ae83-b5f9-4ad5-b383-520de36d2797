@@ -12,63 +12,133 @@
 </script>
 
 <footer
-	class="inset-x-0 bottom-0 -z-10 grid overflow-hidden"
+	class="inset-x-0 bottom-0 -z-10 grid overflow-hidden bg-background"
 	aria-labelledby="footer-heading"
 	{...props}
 >
 	<div
-		class="section-px relative z-10 container mx-auto grid h-full content-between items-start gap-16 gap-x-32 pt-10 lg:grid-cols-2 lg:gap-32"
+		class="section-px relative z-10 container mx-auto pt-16 pb-8"
 	>
-		<!-- Navigation sections with editorial styling -->
-		<div class="text-headline flex items-center gap-4">
-			<!-- <Logo class="size-7" /> -->
-			<div class="text-headline">
-				{CONFIG.companyName}<sup
-					class="ml-0.5 align-super text-[.25em]"
-					style="color: var(--color-foreground);">TM</sup
-				>
+		<!-- Main footer content -->
+		<div class="grid gap-12 lg:grid-cols-4 lg:gap-16">
+			<!-- Company info -->
+			<div class="lg:col-span-2">
+				<div class="text-headline flex items-center gap-4 mb-6">
+					<div class="text-headline">
+						{CONFIG.companyName}<sup
+							class="ml-0.5 align-super text-[.25em]"
+							style="color: var(--color-foreground);">TM</sup
+						>
+					</div>
+				</div>
+				<p class="text-muted-foreground text-sm leading-relaxed max-w-md mb-6">
+					Transforming fragile startup codebases into production-ready systems through incremental refactoring that preserves business continuity while eliminating technical debt.
+				</p>
+				<div class="text-sm space-y-2">
+					<div class="flex items-center gap-2 text-muted-foreground">
+						<span class="font-medium">Target:</span>
+						<span>Series A-B fintech & healthtech startups</span>
+					</div>
+					<div class="flex items-center gap-2 text-muted-foreground">
+						<span class="font-medium">Focus:</span>
+						<span>Zero-downtime refactoring</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Navigation sections -->
+			<div class="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-2">
+				{#each navigation
+					.filter((item) => item.showInFooter !== false)
+					.sort((a, b) => (b?.children?.length || 0) - (a?.children?.length || 0)) as section}
+					<div class="text-muted-foreground">
+						<h3 class="text-foreground font-medium text-sm mb-4" class:hidden={!section?.children}>
+							{section.label}
+						</h3>
+						{#if section.children}
+							<ul class="flex flex-col gap-3">
+								{#each section.children.filter((child) => child.showInFooter !== false) as item}
+									<li>
+										<a 
+											href={item.href} 
+											class="text-sm hover:text-foreground transition-colors duration-200" 
+											target={item?.target || undefined}
+										>
+											{item.label}
+										</a>
+									</li>
+								{/each}
+							</ul>
+						{:else}
+							<a 
+								href={section.href} 
+								class="text-sm hover:text-foreground transition-colors duration-200" 
+								target={section?.target || undefined}
+							>
+								{section.label}
+							</a>
+						{/if}
+					</div>
+				{/each}
 			</div>
 		</div>
 
-		<ul class="grid grid-cols-2 gap-8 gap-y-16 lg:grid-cols-3">
-			{#each navigation
-				.filter((item) => item.showInFooter !== false)
-				.sort((a, b) => (b?.children?.length || 0) - (a?.children?.length || 0)) as section}
-				<div class="text-muted-foreground inline-block transition-all duration-300 ease-out">
-					<h3 class="text-caption text-xs" class:hidden={!section?.children}>
-						{section.label}
-					</h3>
-					{#if section.children}
-						<ul class="mt-4 flex flex-col gap-1.5">
-							{#each section.children.filter((child) => child.showInFooter !== false) as item}
-								<li>
-									<a href={item.href} class="" target={item?.target || undefined}>
-										{item.label}
-									</a>
-								</li>
-							{/each}
-						</ul>
-					{:else}
-						<a href={section.href} class="" target={section?.target || undefined}>
-							{section.label}
-						</a>
-					{/if}
+		<!-- Contact and additional info -->
+		<div class="mt-12 pt-8 border-t" style="border-color: var(--color-border);">
+			<div class="grid gap-8 lg:grid-cols-3">
+				<div>
+					<h4 class="font-medium text-sm mb-3">Get started</h4>
+					<p class="text-muted-foreground text-sm mb-4">
+						Ready to transform your codebase without disrupting your business?
+					</p>
+					<a 
+						href="/contact" 
+						class="inline-flex items-center text-sm font-medium hover:text-foreground transition-colors duration-200"
+					>
+						Schedule a consultation
+						<svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+						</svg>
+					</a>
 				</div>
-			{/each}
-		</ul>
+				
+				<div>
+					<h4 class="font-medium text-sm mb-3">Industries</h4>
+					<ul class="text-muted-foreground text-sm space-y-2">
+						<li>Fintech startups</li>
+						<li>Healthtech companies</li>
+						<li>Series A-C ventures</li>
+					</ul>
+				</div>
+
+				<div>
+					<h4 class="font-medium text-sm mb-3">Approach</h4>
+					<ul class="text-muted-foreground text-sm space-y-2">
+						<li>Incremental refactoring</li>
+						<li>Zero-downtime migrations</li>
+						<li>Compliance-ready systems</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
 		<!-- Footer bottom section -->
 		<div
-			class="col-span-full border-t py-6"
+			class="mt-12 pt-6 border-t"
 			style="border-color: var(--color-border); color: var(--color-muted-foreground);"
 		>
-			<div class="grid grid-cols-2 items-start justify-between gap-4 gap-x-32 text-sm">
-				<div>
-					&copy; {CONFIG.companyName}
-					{new Date().getFullYear()}
+			<div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+				<div class="text-sm">
+					&copy; {CONFIG.companyName} {new Date().getFullYear()}. All rights reserved.
 				</div>
-				<div class="flex items-baseline justify-end gap-3 lg:justify-start">
-					<div class="ml-auto hidden justify-self-end lg:block"><Signature /></div>
+				<div class="flex items-center gap-6">
+					<a href="/privacy" class="text-sm hover:text-foreground transition-colors duration-200">
+						Privacy Policy
+					</a>
+					<a href="/terms" class="text-sm hover:text-foreground transition-colors duration-200">
+						Terms of Service
+					</a>
+					<div class="hidden lg:block"><Signature /></div>
 				</div>
 			</div>
 		</div>
@@ -78,12 +148,27 @@
 <style lang="postcss">
 	@reference '../../../app.css';
 
+	footer {
+		background: var(--color-background);
+		border-top: 1px solid var(--color-border);
+	}
+
 	a {
-		@apply inline-block underline decoration-transparent transition-all duration-300 ease-out;
-		color: var(--color-foreground);
+		@apply inline-block transition-all duration-200 ease-out;
+		color: var(--color-muted-foreground);
+		text-decoration: none;
 
 		&:hover {
-			color: var(--color-muted-foreground);
+			color: var(--color-foreground);
 		}
+	}
+
+	h4 {
+		color: var(--color-foreground);
+	}
+
+	.text-headline {
+		color: var(--color-foreground);
+		font-weight: 600;
 	}
 </style>
