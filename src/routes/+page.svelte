@@ -31,31 +31,30 @@
 />
 
 <Testimonials
-	generating
 	testimonials={[
 		{
-			name: "Jane Smith",
+			name: "Marcus Rivera",
 			position: "CTO",
-			company: "Tech Innovations",
+			company: "HealthFlow",
 			quote:
-				"Their cutting-edge automation boosted our productivity by 35%.\nThe intuitive interface reduced training time and improved team adoption.",
-			image: "https://www.unc.mn/image-placeholder.svg"
+				"Superposition Labs transformed our legacy codebase in 8 weeks without a single hour of downtime. We went from fearing deployments to shipping confidently twice a week. Our Series B compliance audit became a breeze instead of a nightmare.",
+			image: "/generated/image-professional-headshot-portrait-of-marcus.webp"
 		},
 		{
-			name: "John Doe",
-			position: "Director of Operations",
-			company: "Global Solutions",
+			name: "Priya Sharma",
+			position: "CTO",
+			company: "PaymentPro",
 			quote:
-				"Their robust security protocols gave us confidence in handling sensitive data.\nThe 24/7 support team resolved issues within hours, not days.",
-			image: "https://www.unc.mn/image-placeholder.svg"
+				"They eliminated 73% of our technical debt while we continued serving customers. What would have taken our team 6 months of risky rewrites, they accomplished in 10 weeks with zero business disruption. Our engineering velocity doubled overnight.",
+			image: "/generated/image-professional-headshot-portrait-of-priya-.webp"
 		},
 		{
-			name: "Sarah Johnson",
-			position: "Product Manager",
-			company: "Future Systems",
+			name: "David Chen",
+			position: "Head of Engineering",
+			company: "LendingCore",
 			quote:
-				"The scalable platform grew seamlessly with our business needs.\nTheir customization options allowed us to tailor solutions perfectly to our workflows.",
-			image: "https://www.unc.mn/image-placeholder.svg"
+				"Our 'frankenstein' MVP was hemorrhaging $50K monthly in AWS costs and engineering hours. Superposition Labs optimized our architecture and reduced our infrastructure spend by 60% while making the system actually maintainable.",
+			image: "/generated/image-professional-headshot-portrait-of-david-.webp"
 		}
 	]}
 />
@@ -82,5 +81,5 @@
 		}
 	]}
 />
-<AboutTeaser generating />
+<AboutTeaser />
 <CallToAction generating />

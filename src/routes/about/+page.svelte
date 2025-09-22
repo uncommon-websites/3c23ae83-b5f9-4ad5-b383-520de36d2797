@@ -11,30 +11,28 @@
 	// Constants
 	const values = [
 		{
-			title: "Innovation",
-			description: "Constantly challenging the status quo to create better solutions."
+			title: "Practical expertise",
+			description: "We've seen it all in regulated industries. No theoretical solutions, just battle-tested approaches that work in the real world."
 		},
 		{
-			title: "Integrity",
-			description: "Building trust through transparent actions and honest communication."
+			title: "Startup empathy",
+			description: "We understand the pressure-cooker environment. We're here to help, not judge the 'vibe-coded' reality of fast-moving startups."
 		},
 		{
-			title: "Impact",
-			description: "Measuring our success by the positive change we create for our clients."
+			title: "No-nonsense methodology",
+			description: "Structured, incremental refactoring that maintains business continuity. We're the cleanup crew that actually gets things done."
 		}
 	];
 </script>
 
 <SecondaryHero
-	generating
-	title="Solving world hunger"
-	subtitle="one step at a time"
-	imageSrc="https://www.unc.mn/image-placeholder.svg"
+	title="Clean code, without the chaos"
+	subtitle="Incremental refactoring that keeps you moving"
+	imageSrc="/generated/image-photorealistic-candid-scene-of-senior-so.webp"
 />
 
 <!-- Story Section -->
 <Story
-	generating
 	paragraphs={[
 		"We started in 2018 with a simple goal: make helpful tech that people actually need. While many chase profits, we chose to do things differently.",
 		"Beyond making good products, we care about doing the right thing, being kind to our planet, and making sure everyone can use what we build. That's our compass.",
@@ -44,61 +42,28 @@
 />
 
 <!-- Our Culture Section -->
-<Culture {values} generating />
+<Culture {values} />
 
-<!-- StakeholderGrid Section -->
-<StakeholderGrid
-	generating
-	stakeholderType="team"
-	title="Our team."
-	subtitle="Your partners in innovation."
-	stakeholders={[
-		{
-			name: "Alex Morgan",
-			position: "Founder & CEO",
-			bio: "Started the company with a vision to transform the industry through innovative solutions.",
-			image: "https://www.unc.mn/image-placeholder.svg"
-		},
-		{
-			name: "Jamie Chen",
-			position: "Chief Design Officer",
-			bio: "Award-winning designer with a passion for creating intuitive and beautiful experiences.",
-			image: "https://www.unc.mn/image-placeholder.svg"
-		},
-		{
-			name: "Taylor Wright",
-			position: "Head of Engineering",
-			bio: "Technology enthusiast focused on building scalable systems that make a difference.",
-			image: "https://www.unc.mn/image-placeholder.svg"
-		}
-	]}
-/>
-
-<StakeholderGrid
-	generating
-	stakeholderType="investor"
-	title="Backed by the best."
-	subtitle="Point Nine, TSIC and others"
-	stakeholders={[
-		{
-			name: "Point Nine Capital",
-			image: "https://cdn.brandfetch.io/pointnine.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7"
-		},
-		{
-			name: "TSIC Ventures",
-			image: "https://cdn.brandfetch.io/tiny.vc/w/400/h/400/logo?c=1a2b3c4d5e"
-		},
-		{
-			name: "Sequoia Capital",
-			image: "https://cdn.brandfetch.io/sequoiacap.com/w/400/h/400/logo"
-		}
-	]}
-/>
+<!-- Team positioning section - focusing on experience rather than individuals -->
+<section class="section-py section-px">
+	<div class="container mx-auto max-w-4xl text-center">
+		<h2 class="text-h2 mb-4">Senior engineers who've seen it all</h2>
+		<p class="text-body text-gray-600 dark:text-gray-400 mb-8">
+			Our team consists of senior engineers and architects with deep experience in regulated industries. 
+			We've navigated the pressures of fintech compliance audits, healthtech security requirements, 
+			and the unique challenges of scaling startup systems under intense business pressure.
+		</p>
+		<p class="text-body text-gray-600 dark:text-gray-400">
+			We understand the reality of "vibe-coded" applications and the technical debt that accumulates 
+			when you're moving fast to capture market opportunities. That's exactly why we're here - 
+			to be your experienced cleanup crew.
+		</p>
+	</div>
+</section>
 
 <!-- CTA Section -->
 <CallToAction
-	generating
-	title="Ready to collaborate?"
-	subtitle="Let's create something amazing"
-	description="Join the companies already leveraging our expertise to transform their digital presence and achieve their business goals."
+	title="Stop letting technical debt slow you down"
+	subtitle="Ready to scale with confidence?"
+	description="Join Series A and Series B startups who've transformed their fragile codebases into production-ready systems without the chaos of complete rewrites. Let's rebuild trust in your technology."
 />

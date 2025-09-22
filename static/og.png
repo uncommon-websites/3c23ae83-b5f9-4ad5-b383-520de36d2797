@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"error":{"message":"Your account is not active. Please upgrade your account to continue using the API","code":"NotActive"},"requestId":"01997d72-a8c9-77fb-b057-7de327402e90_rl"}
+=======
+{"error":{"message":"Your account is not active. Please upgrade your account to continue using the API","code":"NotActive"},"requestId":"01997d74-1b6b-7413-8716-7cd7f335d789_rl"}
+>>>>>>> 4f71bcd69f10e58d2d1f9c1381c34d6436505187
