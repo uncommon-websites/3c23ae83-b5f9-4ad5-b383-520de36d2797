@@ -26,10 +26,9 @@
 </script>
 
 <SecondaryHero
-	generating
-	title="Solving world hunger"
-	subtitle="one step at a time"
-	imageSrc="https://www.unc.mn/image-placeholder.svg"
+	title="Clean code, without the chaos"
+	subtitle="Incremental refactoring that keeps you moving"
+	imageSrc="/generated/image-photorealistic-candid-scene-of-senior-so.webp"
 />
 
 <!-- Story Section -->
